@@ -1,2 +1,2 @@
 # Weather Forecast
-[![Github All Releases](https://img.shields.io/appveyor/build/Claudiu7197/WeatherForecast?style=plastic)]()
+[![Buils Status](https://img.shields.io/github/workflow/status/Claudiu7197/WeatherForecast/Java%20CI%20with%20Gradle?logo=github&style=plastic)]()
