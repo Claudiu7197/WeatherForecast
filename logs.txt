@@ -1,0 +1,6 @@
+[10/Jan/21 06:14:03] INFO:: Info log
+[10/Jan/21 06:14:03] ERROR:: Error log
+[10/Jan/21 06:14:03] DEBUG:: Debug log
+[10/Jan/21 06:17:54] INFO:: Info log
+[10/Jan/21 06:17:54] ERROR:: Error log
+[10/Jan/21 06:17:54] DEBUG:: Debug log
