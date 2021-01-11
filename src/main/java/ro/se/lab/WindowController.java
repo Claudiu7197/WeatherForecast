@@ -13,7 +13,7 @@ public class WindowController {
 
     public void OnTestBtnPressed(javafx.event.ActionEvent actionEvent) {
         testBtn.setDisable(true);
-        Log.Info("Info log");
+        //Log.Info("Info log");
         Log.Error("Error log");
         Log.Debug("Debug log");
         testLabel.setText("You pressed the damm button");

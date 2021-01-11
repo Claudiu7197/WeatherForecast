@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Log {
-    private static Log log = new Log();
+    protected static String fileName = "logs.txt";
     private enum LOG_TYPE
     {
         INFO, ERROR, DEBUG
@@ -15,7 +15,7 @@ public class Log {
 
 
     private Log() {
-        File logFile = new File("logs.txt");
+        File logFile = new File(fileName);
     }
 
     private static String getLogText(String text, LOG_TYPE type)
@@ -29,7 +29,7 @@ public class Log {
 
     public static void Info(String args) {
         try {
-            FileWriter writer = new FileWriter("logs.txt", true);
+            FileWriter writer = new FileWriter(fileName, true);
             writer.write(getLogText(args, LOG_TYPE.INFO));
             writer.close();
         } catch (IOException e) {
@@ -39,7 +39,7 @@ public class Log {
 
     public static void Debug(String args) {
         try {
-            FileWriter writer = new FileWriter("logs.txt", true);
+            FileWriter writer = new FileWriter(fileName, true);
             writer.write(getLogText(args, LOG_TYPE.DEBUG));
             writer.close();
         } catch (IOException e) {
@@ -49,7 +49,7 @@ public class Log {
 
     public static void Error(String args) {
         try {
-            FileWriter writer = new FileWriter("logs.txt", true);
+            FileWriter writer = new FileWriter(fileName, true);
             writer.write(getLogText(args, LOG_TYPE.ERROR));
             writer.close();
         } catch (IOException e) {
