@@ -1,6 +1,7 @@
 package ro.se.lab.Log;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -14,6 +15,7 @@ class LogTest {
     private static final String testFileName = "test.txt";
 
     @Test
+    @DisplayName("Log_info_test")
     void info() {
         String testText = "test";
         String logLevel = "INFO";
@@ -32,6 +34,7 @@ class LogTest {
     }
 
     @Test
+    @DisplayName("Log_debug_test")
     void debug() {
         String testText = "test";
         String logLevel = "DEBUG";
@@ -50,6 +53,7 @@ class LogTest {
     }
 
     @Test
+    @DisplayName("Log_error_test")
     void error() {
         String testText = "test";
         String logLevel = "ERROR";

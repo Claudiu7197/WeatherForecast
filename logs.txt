@@ -1,0 +1,2 @@
+[11/Jan/21 03:25:21] ERROR:: Error log
+[11/Jan/21 03:25:21] DEBUG:: Debug log
