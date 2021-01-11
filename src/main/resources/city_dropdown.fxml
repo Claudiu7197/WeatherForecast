@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.shape.Box?>
+<Pane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ro.se.lab.Controllers.CityController"
+            prefWidth="250"
+            stylesheets="appstyle.css"
+            styleClass="column2">
+
+    <ChoiceBox styleClass="dropdown"
+               fx:id="cityBox"
+               minWidth="100" />
+
+</Pane>

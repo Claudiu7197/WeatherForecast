@@ -1,4 +1,4 @@
-package ro.se.lab;
+package ro.se.lab.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

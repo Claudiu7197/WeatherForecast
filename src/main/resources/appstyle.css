@@ -1,0 +1,11 @@
+.column1{
+-fx-background-color: red;
+}
+
+.column2{
+-fx-background-color: blue;
+}
+
+.dropdown{
+-fx-mark-color: blue;
+}
