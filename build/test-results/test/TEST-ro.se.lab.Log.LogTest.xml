@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ro.se.lab.Log.LogTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-01-11T01:12:55" hostname="DESKTOP-8TNA4AV" time="0.066">
-  <properties/>
-  <testcase name="info()" classname="ro.se.lab.Log.LogTest" time="0.052"/>
-  <testcase name="debug()" classname="ro.se.lab.Log.LogTest" time="0.006"/>
-  <testcase name="error()" classname="ro.se.lab.Log.LogTest" time="0.006"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
