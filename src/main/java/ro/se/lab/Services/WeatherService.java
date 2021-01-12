@@ -25,9 +25,8 @@ public class WeatherService
             cityController.OnCountryChanged(value);
     }
 
-    public static String GetCurrentCountry()
+    public static void OnCityChanged(String value)
     {
-        return countryController.getCurrentCountry();
+        OpenWeatherCaller.GetData(value);
     }
-
 }

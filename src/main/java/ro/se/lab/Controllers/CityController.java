@@ -1,5 +1,7 @@
 package ro.se.lab.Controllers;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,7 +22,14 @@ public class CityController implements Initializable {
         assert cityBox != null : "fx:id=\"countryBox\" was not injected: check fxml file!";
         list = cityBox.getItems();
         WeatherService.InitCityController(this);
-        OnCountryChanged(WeatherService.GetCurrentCountry());
+
+        // On item changed
+        cityBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                WeatherService.OnCityChanged(newValue);
+            }
+        });
     }
 
     public void OnCountryChanged(String value)

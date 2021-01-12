@@ -26,7 +26,6 @@ public class CountryController implements Initializable {
         ObservableList<String> list = countryBox.getItems();
         list.add("England");
         list.add("Portugal");
-        countryBox.setValue(list.get(0));
         WeatherService.InitCountryController(this);
 
         // On item changed
@@ -37,10 +36,4 @@ public class CountryController implements Initializable {
             }
         });
     }
-
-    public String getCurrentCountry()
-    {
-        return countryBox.getValue();
-    }
-
 }
