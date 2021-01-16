@@ -12,7 +12,9 @@
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="ro.se.lab.Controllers.WindowController"
           prefHeight="420.0" prefWidth="600.0"
-          hgap="50" vgap="10">
+          hgap="50" vgap="10"
+          stylesheets="appstyle.css"
+          styleClass="main">
     <padding>
         <Insets top="25" right="25" left="25" bottom="25"/>
     </padding>
@@ -29,5 +31,25 @@
     <fx:include source="city_dropdown.fxml"
                 GridPane.rowIndex="0" GridPane.columnIndex="1"
                 GridPane.columnSpan="1" GridPane.rowSpan="1"
+                GridPane.halignment="CENTER"/>
+
+    <fx:include source="basic_forescast.fxml"
+                GridPane.rowIndex="1" GridPane.columnIndex="0"
+                GridPane.columnSpan="1" GridPane.rowSpan="1"
+                GridPane.halignment="CENTER"/>
+
+    <fx:include source="icon.fxml"
+                GridPane.rowIndex="2" GridPane.columnIndex="0"
+                GridPane.columnSpan="1" GridPane.rowSpan="1"
+                GridPane.halignment="CENTER"/>
+
+    <fx:include source="temperature.fxml"
+                GridPane.rowIndex="3" GridPane.columnIndex="0"
+                GridPane.columnSpan="1" GridPane.rowSpan="1"
+                GridPane.halignment="CENTER"/>
+
+    <fx:include source="detailed_forecast.fxml"
+                GridPane.rowIndex="2" GridPane.columnIndex="1"
+                GridPane.columnSpan="1" GridPane.rowSpan="2"
                 GridPane.halignment="CENTER"/>
 </GridPane>

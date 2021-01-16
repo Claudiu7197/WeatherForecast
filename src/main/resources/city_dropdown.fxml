@@ -11,9 +11,7 @@
 <Pane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="ro.se.lab.Controllers.CityController"
-            prefWidth="250"
-            stylesheets="appstyle.css"
-            styleClass="column2">
+            prefWidth="250">
 
     <ChoiceBox styleClass="dropdown"
                fx:id="cityBox"

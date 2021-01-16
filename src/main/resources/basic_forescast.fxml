@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- city name, country, day, forecast -->
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<Pane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ro.se.lab.Controllers.BasicForecastController"
+      prefWidth="250">
+
+    <VBox spacing="5">
+        <Text fx:id="cityName" stroke="black">
+            <font>
+                <Font name="Arial" size="26"/>
+            </font>
+        </Text>
+        <Text fx:id="forecast" stroke="darkgray">
+            <font>
+                <Font name="Verdana" size="20"/>
+            </font>
+        </Text>
+    </VBox>
+</Pane>

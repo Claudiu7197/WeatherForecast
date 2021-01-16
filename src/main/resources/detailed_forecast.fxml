@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- humidity, wind, etc -->
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ro.se.lab.Controllers.DetailedForecastController"
+            prefWidth="250">
+
+    <VBox spacing="10">
+        <HBox>
+            <Text text="Precipitation: " stroke="black">
+                <font>
+                    <Font name="Verdana" size="16"/>
+                </font>
+            </Text>
+            <Text fx:id="precipitation" stroke="darkgray">
+                <font>
+                    <Font name="Verdana" size="16"/>
+                </font>
+            </Text>
+        </HBox>
+        <HBox>
+            <Text text="Humidity: " stroke="black">
+                <font>
+                    <Font name="Verdana" size="16"/>
+                </font>
+            </Text>
+            <Text fx:id="humidity" stroke="darkgray">
+                <font>
+                    <Font name="Verdana" size="16"/>
+                </font>
+            </Text>
+        </HBox>
+        <HBox>
+            <Text text="Wind: " stroke="black">
+                <font>
+                    <Font name="Verdana" size="16"/>
+                </font>
+            </Text>
+            <Text fx:id="wind" stroke="darkgray">
+                <font>
+                    <Font name="Verdana" size="16"/>
+                </font>
+            </Text>
+        </HBox>
+    </VBox>
+</AnchorPane>

@@ -12,9 +12,7 @@
 <Pane xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="ro.se.lab.Controllers.CountryController"
-      prefWidth="250"
-      stylesheets="appstyle.css"
-      styleClass="column1">
+      prefWidth="250">
 
     <ChoiceBox styleClass="dropdown"
             fx:id="countryBox"
