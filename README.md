@@ -7,4 +7,4 @@
 [![Code Size](https://img.shields.io/github/languages/code-size/Claudiu7197/WeatherForecast?style=plastic)]()
 [![Code Size](https://img.shields.io/badge/status-in%20progress-orange?style=plastic)]()
 
-![Presentation](/Wxwmple1.png)
+![Presentation](/Example1.png)
