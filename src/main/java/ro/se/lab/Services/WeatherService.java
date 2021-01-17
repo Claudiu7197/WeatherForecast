@@ -1,11 +1,13 @@
 package ro.se.lab.Services;
 
 import ro.se.lab.Controllers.*;
+import ro.se.lab.Input.FileRead;
 
 import javax.swing.*;
 
 public class WeatherService
 {
+    private static FileRead reader;
     private static String currentCity;
     private static String currentCountry;
     private static CityController cityController;
@@ -14,7 +16,6 @@ public class WeatherService
     private static DetailedForecastController detailedForecastController;
     private static IconController iconController;
     private static TemperatureController temperatureController;
-
 
     public static void InitCityController(CityController controller)
     {
@@ -31,8 +32,7 @@ public class WeatherService
         basicForecastController = controller;
     }
 
-    public static void InitDetailedController(DetailedForecastController controller)
-    {
+    public static void InitDetailedController(DetailedForecastController controller){
         detailedForecastController = controller;
     }
 
@@ -41,8 +41,7 @@ public class WeatherService
         iconController = controller;
     }
 
-    public static void InitTemperatureController(TemperatureController controller)
-    {
+    public static void InitTemperatureController(TemperatureController controller){
         temperatureController = controller;
     }
 

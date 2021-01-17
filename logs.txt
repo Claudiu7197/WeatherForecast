@@ -1,6 +1,0 @@
-[11/Jan/21 03:25:21] ERROR:: Error log
-[11/Jan/21 03:25:21] DEBUG:: Debug log
-[11/Jan/21 18:27:57] ERROR:: Error log
-[11/Jan/21 18:27:57] DEBUG:: Debug log
-[11/Jan/21 18:28:42] ERROR:: Error log
-[11/Jan/21 18:28:42] DEBUG:: Debug log
