@@ -6,3 +6,5 @@
 [![Last Commit](https://img.shields.io/github/last-commit/Claudiu7197/WeatherForecast?style=plastic)]()
 [![Code Size](https://img.shields.io/github/languages/code-size/Claudiu7197/WeatherForecast?style=plastic)]()
 [![Code Size](https://img.shields.io/badge/status-in%20progress-orange?style=plastic)]()
+
+![Presentation](/Example1.PNG)
