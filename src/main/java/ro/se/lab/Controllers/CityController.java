@@ -6,6 +6,8 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import ro.se.lab.Input.Country;
+import ro.se.lab.Input.FileRead;
 import ro.se.lab.Services.WeatherService;
 
 import java.net.URL;
@@ -20,7 +22,6 @@ public class CityController implements Initializable {
     public void initialize(URL fxmlFileLocation, ResourceBundle resources)
     {
         assert cityBox != null : "fx:id=\"countryBox\" was not injected: check fxml file!";
-        list = cityBox.getItems();
         WeatherService.InitCityController(this);
 
         // On item changed
@@ -34,19 +35,15 @@ public class CityController implements Initializable {
 
     public void OnCountryChanged(String value)
     {
-        if(value.equals("England"))
+        list = cityBox.getItems();
+        list.clear();
+        for(Country c : FileRead.countries)
         {
-            list.clear();
-            list.add("London");
-            list.add("Manchester");
-            cityBox.setValue(list.get(0));
-        }
-        if(value.equals("Portugal"))
-        {
-            list.clear();
-            list.add("Lisabon");
-            list.add("Well mate I don't know");
-            cityBox.setValue(list.get(0));
+            if(c.CountryName.equals(value))
+            {
+                for(String city : c.cities)
+                    list.add(city);
+            }
         }
     }
 }

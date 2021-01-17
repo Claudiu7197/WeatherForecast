@@ -9,9 +9,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Tooltip;
+import ro.se.lab.Input.Country;
 import ro.se.lab.Services.WeatherService;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class CountryController implements Initializable {
@@ -23,10 +25,8 @@ public class CountryController implements Initializable {
     public void initialize(URL fxmlFileLocation, ResourceBundle resources)
     {
         assert countryBox != null : "fx:id=\"countryBox\" was not injected: check fxml file!";
-        ObservableList<String> list = countryBox.getItems();
-        list.add("England");
-        list.add("Portugal");
         WeatherService.InitCountryController(this);
+
 
         // On item changed
         countryBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
@@ -35,5 +35,14 @@ public class CountryController implements Initializable {
                 WeatherService.OnCountryChanged(newValue);
             }
         });
+    }
+
+    public void InitCountries(ArrayList<Country> countries)
+    {
+        ObservableList<String> list = countryBox.getItems();
+        for(Country c : countries)
+        {
+            list.add(c.CountryName);
+        }
     }
 }

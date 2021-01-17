@@ -31,7 +31,7 @@ public class DetailedForecastController implements Initializable
 
     public void SetData()
     {
-        CurrentWeather cw = OpenWeatherCaller.currentWeather;
+        CurrentWeather cw = OpenWeatherCaller.GetWeather();
         precipitation.setText("no value");
         if(cw.rain != null)
             precipitation.setText(String.valueOf(cw.rain.rainVolume) + "mm");

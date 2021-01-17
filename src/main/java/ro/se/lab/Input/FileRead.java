@@ -25,14 +25,40 @@ public class FileRead
                     first = true;
                     continue;
                 }
-                System.out.println(line);
                 inputs.add(new Entity(line));
             }
             bufferedReader.close();
             System.out.println(inputs.size());
+            countries = MakeCountryArray(inputs);
+            System.out.println(countries.size());
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<Country> MakeCountryArray(ArrayList<Entity> entities)
+    {
+        ArrayList<Country> result = new ArrayList<>();
+        for (Entity e : entities)
+        {
+            String countryName = e.CountryCode;
+            boolean exists = false;
+            for(int i = 0; i<result.size(); i++)
+            {
+                if(result.get(i).CountryName.equals(countryName))
+                {
+                    exists = true;
+                    result.get(i).cities.add(e.CityName);
+                }
+            }
+            if(!exists)
+            {
+                result.add(new Country(countryName));
+                int index = countries.size()-1;
+                result.get(index).cities.add(e.CityName);
+            }
+        }
+        return result;
     }
 }

@@ -10,7 +10,7 @@ public class Entity
 
     public Entity(String line)
     {
-        String[] array = line.split(" ");
+        String[] array = line.split("\\s+");
         ID = array[0];
         CityName = array[1];
         try {

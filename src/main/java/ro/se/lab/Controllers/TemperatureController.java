@@ -48,23 +48,23 @@ public class TemperatureController implements Initializable
         if(isKelvin)
         {
             isKelvin = false;
-            String newTemp = OpenWeatherCaller.currentWeather.main.ConvertToCelsius(Main.TEMP_TYPE.TEMP);
+            String newTemp = OpenWeatherCaller.GetWeather().main.ConvertToCelsius(Main.TEMP_TYPE.TEMP);
             temp.setText(newTemp+celsius);
-            String newFeel = OpenWeatherCaller.currentWeather.main.ConvertToCelsius(Main.TEMP_TYPE.REALFEEL);
+            String newFeel = OpenWeatherCaller.GetWeather().main.ConvertToCelsius(Main.TEMP_TYPE.REALFEEL);
             feel.setText(newFeel+celsius);
-            String newMin = OpenWeatherCaller.currentWeather.main.ConvertToCelsius(Main.TEMP_TYPE.TEMP_MIN);
-            String newMax = OpenWeatherCaller.currentWeather.main.ConvertToCelsius(Main.TEMP_TYPE.TEMP_MAX);
+            String newMin = OpenWeatherCaller.GetWeather().main.ConvertToCelsius(Main.TEMP_TYPE.TEMP_MIN);
+            String newMax = OpenWeatherCaller.GetWeather().main.ConvertToCelsius(Main.TEMP_TYPE.TEMP_MAX);
             minMax.setText(newMin+celsius+"/"+newMax+celsius);
         }
         else
         {
             isKelvin = true;
-            double newTemp = OpenWeatherCaller.currentWeather.main.temp;
+            double newTemp = OpenWeatherCaller.GetWeather().main.temp;
             temp.setText(String.valueOf(newTemp)+kelvin);
-            double newFeel = OpenWeatherCaller.currentWeather.main.feels_like;
+            double newFeel = OpenWeatherCaller.GetWeather().main.feels_like;
             feel.setText(String.valueOf(newFeel)+kelvin);
-            double newMin = OpenWeatherCaller.currentWeather.main.temp_min;
-            double newMax = OpenWeatherCaller.currentWeather.main.temp_max;
+            double newMin = OpenWeatherCaller.GetWeather().main.temp_min;
+            double newMax = OpenWeatherCaller.GetWeather().main.temp_max;
             minMax.setText(String.valueOf(newMin)+kelvin+"/"+String.valueOf(newMax)+kelvin);
         }
     }

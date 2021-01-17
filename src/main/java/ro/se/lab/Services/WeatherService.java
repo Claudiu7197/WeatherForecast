@@ -7,7 +7,6 @@ import javax.swing.*;
 
 public class WeatherService
 {
-    private static FileRead reader;
     private static String currentCity;
     private static String currentCountry;
     private static CityController cityController;
@@ -22,9 +21,9 @@ public class WeatherService
         cityController = controller;
     }
 
-    public static void InitCountryController(CountryController controller)
-    {
+    public static void InitCountryController(CountryController controller)    {
         countryController = controller;
+        countryController.InitCountries(FileRead.countries);
     }
 
     public static void InitBasicController(BasicForecastController controller)
@@ -45,8 +44,7 @@ public class WeatherService
         temperatureController = controller;
     }
 
-    public static void OnCountryChanged(String value)
-    {
+    public static void OnCountryChanged(String value)    {
         if(cityController != null)
         {
             cityController.OnCountryChanged(value);
@@ -54,16 +52,15 @@ public class WeatherService
         }
     }
 
-    public static void OnCityChanged(String value)
-    {
+    public static void OnCityChanged(String value)    {
         currentCity = value;
         // call the server for data ->> data is stored in OpenWeatherCaller.CurrentWeather
         OpenWeatherCaller.GetData(currentCity, currentCountry);
 
         // Update the rest of the UI
-        iconController.SetImage(OpenWeatherCaller.currentWeather.weather.get(0).icon);
-        basicForecastController.SetData(currentCity, OpenWeatherCaller.currentWeather.weather.get(0).description);
-        temperatureController.SetData(OpenWeatherCaller.currentWeather.main);
+        iconController.SetImage(OpenWeatherCaller.GetWeather().weather.get(0).icon);
+        basicForecastController.SetData(currentCity, OpenWeatherCaller.GetWeather().weather.get(0).description);
+        temperatureController.SetData(OpenWeatherCaller.GetWeather().main);
         detailedForecastController.SetData();
     }
 }

@@ -11,7 +11,7 @@ import java.net.URL;
 public class OpenWeatherCaller {
 
     private static String key = "c5de5cc9e7820ad61013a841b0512de0";
-    public static CurrentWeather currentWeather;
+    private static CurrentWeather currentWeather;
 
     public static void GetData(String city, String country)
     {
@@ -36,4 +36,10 @@ public class OpenWeatherCaller {
             System.out.println(e.toString());
         }
     }
+
+    public static CurrentWeather GetWeather()
+    {
+        return currentWeather;
+    }
+
 }
