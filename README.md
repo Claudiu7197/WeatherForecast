@@ -8,3 +8,9 @@
 [![Code Size](https://img.shields.io/badge/status-in%20progress-orange?style=plastic)]()
 
 ![Presentation](/Example1.PNG)
+
+UML Diagrom for class WeatherService
+![Presentation](/s1)
+
+UML Diagrom for class Log
+![Presentation](/s2)
