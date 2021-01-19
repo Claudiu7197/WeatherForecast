@@ -15,4 +15,5 @@ UML Diagrom for class WeatherService
 
 UML Diagrom for class Log
 
+
 ![Presentation](/s2.PNG)
